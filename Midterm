@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart'; 
+ class Counter extends StatelessWidget { 
+ //palitan ang statefull to stateless widget
+   const Counter({super.key}); 
+  
+ //Delete only some of the line of the code 
+ void callBack(){ 
+   print('Button is Pressed!!!'); 
+ } 
+ //Tas a callback method 
+   @override 
+   Widget build(BuildContext context) { 
+  
+     return Row( 
+       mainAxisAlignment: MainAxisAlignment.center, 
+       children: <Widget>[ 
+         ElevatedButton( 
+           onPressed: callBack, 
+           // Call the callback method by coding the onpressed method. 
+           child: const Text('Increment'), 
+         ), 
+         const SizedBox(width: 16), 
+         Text('Count:'), 
+       ], 
+     ); 
+   } 
+ } 
+  
+ void main() { 
+   runApp( 
+     const MaterialApp( 
+       home: Scaffold( 
+         body: Center( 
+           child: Counter(), 
+         ), 
+       ), 
+     ), 
+   ); 
+ }
